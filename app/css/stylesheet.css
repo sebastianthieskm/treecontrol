@@ -1,0 +1,56 @@
+  
+  /* Remove margins and padding from the parent ul */
+  ul, #myUL{
+    list-style-type: none;
+  }
+  
+  #myUL {
+    margin: 0;
+    padding: 0;       
+    background-color: #00B7C3; 
+    color:white;
+    font-family: "Segoe UI Semibold", "Segoe WP Semibold", device-segoe-semibold, "Segoe UI", "Segoe WP", Segoe, Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 12pt;
+  }
+
+  /* Style the caret/arrow */
+  .caret {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+  }
+
+  .noncaret {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+  }
+
+  /* hovers */
+  .caret:hover {
+    background-color: #505C6D;
+  }
+  .noncaret:hover {
+    background-color: #505C6D;
+  }
+
+  /* Create the caret char and style it */
+  .caret::before {
+    content: "(+)";
+    color: black;
+    display: inline-flex;
+    margin-right: 6px;
+  }
+  
+  /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+  .caret-down::before {
+    content: "(-)";
+  }
+  
+  /* Hide the nested list */
+  .nested {
+    display: none;
+  } 
+  
+  /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+  .active {
+    display: block;
+  }
